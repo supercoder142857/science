@@ -66,12 +66,12 @@ function updateLinks() {
 }
 
 openLinks.querySelector(".add").onclick = function(){
-    this.quickLinkUrl = prompt("Enter the url you want to add to your quick links (ex. google.com). Click CANCEL to go back:");
+    this.quickLinkUrl = prompt("Enter the url you want to add to your quick links (ex. mrclee.com). Click CANCEL to go back:");
     if(this.quickLinkUrl == null){return}
     this.quickLinkUrl = this.quickLinkUrl.trim();
     if (!isUrl(this.quickLinkUrl)) this.quickLinkUrl = 'https://www.google.com/search?q=' + this.quickLinkUrl;
     if (!(this.quickLinkUrl.startsWith('https://') || this.quickLinkUrl.startsWith('http://'))) this.quickLinkUrl = 'http://' + this.quickLinkUrl;
-    this.quickLinkName = prompt("Enter the name you want for that URL (ex. Google). The name will be shown in 'Quick Links.' Click CANCEL to exit:");
+    this.quickLinkName = prompt("Enter the name you want for that URL (ex. Mr. Clee's Math Site). The name will be shown in 'Quick Links.' Click CANCEL to exit:");
     if(this.quickLinkName == null){return}
     this.currentLinks = localStorage.getItem("quickLinkDetails") == null ? [] : JSON.parse(localStorage.getItem("quickLinkDetails"));
     if (this.quickLinkName == "") this.quickLinkName = "No name set";
