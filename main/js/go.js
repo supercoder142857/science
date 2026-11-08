@@ -80,7 +80,7 @@ function quickGo(url, prx){
 
 function defaultUrl(url){
   if( !url.includes('.') && !url.startsWith('https://') && !url.startsWith('http://') ){
-    this.url = "https://www.google.com/search?q=" + url;
+    this.url = "https://www.duckduckgo.com?q=" + url;
   }
   else if (url.startsWith('https://')) {
     this.url = url;
