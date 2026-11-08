@@ -80,7 +80,7 @@ function quickGo(url, prx){
 
 function defaultUrl(url){
   if( !url.includes('.') && !url.startsWith('https://') && !url.startsWith('http://') ){
-    this.url = "https://www.duckduckgo.com?q=" + url;
+    this.url = "https://www.duckduckgo.com/?q=" + url;
   }
   else if (url.startsWith('https://')) {
     this.url = url;
@@ -134,7 +134,7 @@ function uv(url) { // Open Ultraviolet
     scope: __uv$config.prefix
   }).then(() => {
     this.url = url.trim();
-    if (!isUrl(this.url)) this.url = 'https://www.duckduckgo.com/q=' + this.url;
+    if (!isUrl(this.url)) this.url = 'https://www.duckduckgo.com/?q=' + this.url;
     else if (!(this.url.startsWith('https://') || this.url.startsWith('http://'))) this.url = 'http://' + this.url;
     if(url != ""){
       if(localStorage.getItem("ab_cloak") == "true") {
