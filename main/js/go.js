@@ -134,7 +134,7 @@ function uv(url) { // Open Ultraviolet
     scope: __uv$config.prefix
   }).then(() => {
     this.url = url.trim();
-    if (!isUrl(this.url)) this.url = 'https://www.google.com/search?q=' + this.url;
+    if (!isUrl(this.url)) this.url = 'https://www.duckduckgo.com/q=' + this.url;
     else if (!(this.url.startsWith('https://') || this.url.startsWith('http://'))) this.url = 'http://' + this.url;
     if(url != ""){
       if(localStorage.getItem("ab_cloak") == "true") {
