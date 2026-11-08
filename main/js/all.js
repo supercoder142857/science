@@ -10,7 +10,7 @@ function usingFirefox(){
   return navigator.userAgent.indexOf("Firefox") != -1;
 }
 
-var redirectSite = "https://www.google.com";
+var redirectSite = "https://www.duckduckgo.com";
 
 if(inFrame() != true && usingFirefox() != true && localStorage.getItem("auto_cloak") == "true" && window.location.pathname != "/") {
   var tab = window.open('about:blank', '_blank');
